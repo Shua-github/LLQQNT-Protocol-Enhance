@@ -6,13 +6,13 @@
 
 ## 支持的版本
 
-* Windows X64 QQ 28418 - 29456
+* Windows X64 QQ 28418 ~ 29456
 
-* Linux X64 QQ 28498 - 29456
+* Linux X64 QQ 28498 ~ 29456
 
-* Linux ARM64 QQ 28498 - 29456
+* Linux ARM64 QQ 28498 ~ 29456
 
-暂时不支持 Mac
+* Mac ARM64 QQ 29456 ~ 29456
 
 ## 使用方法
 
@@ -20,7 +20,8 @@
 
 Release 页面下载并将本插件放入 LiteLoaderQQNT 插件目录即可, 重启QQ即可，或者参考 LiteloaderQQNT [插件安装方法](https://liteloaderqqnt.github.io/guide/plugins.html)
 
-[//]: # (注意：Mac 用户需下载 napcat.packet.production.py 运行（在QQ启动之前运行）)
+注意：Mac 用户需要在 `设置 - 隐私与安全` 允许 MoeHoo 的运行，然后重启QQ
+
 
 ### 功能
 

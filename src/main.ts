@@ -27,12 +27,15 @@ interface SpecialTitleParams{
 }
 
 ipcMain.handle('llqqnt_pp_poke', async (event: any, {groupUin, userUin}: PokeParams) => {
-    console.log('llqqnt_pp_group_poke called', userUin, groupUin);
-    if (groupUin){
-        await api.sendPokePacket(+userUin, +groupUin);
-    }
-    else{
-        await api.sendPokePacket(+userUin);
+    console.log('llqqnt_pp_poke called', userUin, groupUin);
+    try {
+        if (groupUin) {
+            await api.sendPokePacket(+userUin, +groupUin);
+        } else {
+            await api.sendPokePacket(+userUin);
+        }
+    }catch (e) {
+        console.log('llqqnt_pp_poke error', e);
     }
 });
 

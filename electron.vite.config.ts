@@ -25,7 +25,7 @@ const config: ElectronViteConfig = {
         external,
         input: 'src/main.ts',
       },
-      minify: true,
+      minify: false,
     },
     resolve: {
       alias: {

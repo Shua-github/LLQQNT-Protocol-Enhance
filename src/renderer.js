@@ -14,7 +14,7 @@ export function injectPokeMenu() {
 
     // 选择目标节点
     const targetNode = document.body;
-    console.log(targetNode);
+    // console.log(targetNode);
     // 配置需要观察的变动类型
     const config = {
         childList: true,      // 观察子节点的变动
@@ -31,7 +31,7 @@ export function injectPokeMenu() {
                     if (node.nodeType === Node.ELEMENT_NODE) {
                         const avatars = node.querySelectorAll('.avatar');
                         avatars.forEach(avatar => {
-                            console.log(avatar);
+                            // console.log(avatar);
                             avatar.addEventListener('contextmenu', e => {
                                 // console.log('右击了头像', e);
                                 const message = getMsgByAvatar(e.target)
@@ -116,16 +116,16 @@ export async function onSettingWindowCreated(view) {
     <setting-panel>
         <setting-list data-direction="column">
            <setting-item>
-                <setting-text>支持的 Windows QQ 版本：X64 28418 - 29456</setting-text>
+                <setting-text>支持的 Windows QQ 版本：X64 28418 ~ 29456</setting-text>
             </setting-item>
             <setting-item>
-                <setting-text>支持的 Linux QQ 版本：X64/Arm64 28498 - 29456</setting-text>
+                <setting-text>支持的 Linux QQ 版本：X64/Arm64 28498 ~ 29456</setting-text>
             </setting-item> 
             <setting-item>
-                <setting-text>暂不支持 Mac</setting-text>
+                <setting-text>Mac QQ 版本：Arm64 29456</setting-text>
             </setting-item> 
             <setting-item>
-                <setting-link data-value="https://github.com/NapNeko/LLQQNT-Protocol-Enhance/">当前版本：1.0.3</setting-link>
+                <setting-link data-value="https://github.com/NapNeko/LLQQNT-Protocol-Enhance/">当前版本：1.0.4</setting-link>
                 <setting-link data-value="https://qm.qq.com/q/fnNSnyClMY">QQ群 545402644</setting-link>
             </setting-item>
         </setting-list>
