@@ -4,7 +4,7 @@
   "name": "协议增强",
   "slug": "LLQQNT-Protocol-Enhance",
   "description": "利用协议包扩展 NTQQ 功能",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "icon": "./logo.jpg",
   "authors": [
     {

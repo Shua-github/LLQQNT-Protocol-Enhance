@@ -65,22 +65,22 @@ const config: ElectronViteConfig = {
   //   },
   //   resolve: {},
   // },
-  // renderer: {
-  //   // vite config options
-  //   build: {
-  //     outDir: 'dist/renderer',
-  //     emptyOutDir: true,
-  //     lib: {
-  //       formats: ['es'],
-  //       entry: { renderer: 'src/renderer/index.ts' },
-  //     },
-  //     rollupOptions: {
-  //       // external: externalAll,
-  //       input: 'src/renderer/index.ts',
-  //     },
-  //   },
-  //   resolve: {},
-  // },
+  renderer: {
+    // vite config options
+    build: {
+      outDir: 'dist/',
+      emptyOutDir: false,
+      lib: {
+        formats: ['es'],
+        entry: { renderer: 'src/renderer.js' },
+      },
+      rollupOptions: {
+        // external: externalAll,
+        input: 'src/renderer.js',
+      },
+    },
+    resolve: {},
+  },
 }
 
 export default config
