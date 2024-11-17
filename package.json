@@ -1,6 +1,6 @@
 {
   "name": "llqqnt-protocol-packet",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "利用协议包扩展 NTQQ 功能",
   "type": "module",
   "main": "dist/main.cjs",
@@ -16,11 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "@protobuf-ts/runtime": "^2.9.4",
-    "@types/ws": "^8.5.12",
     "electron-osx-prompt": "^1.4.1",
     "electron-prompt": "^1.7.0",
-    "electron-prompts": "^0.9.13",
-    "ws": "^8.18.0"
+    "electron-prompts": "^0.9.13"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.3.0",

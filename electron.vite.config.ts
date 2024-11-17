@@ -3,7 +3,6 @@ import path from 'node:path'
 import type { ElectronViteConfig } from 'electron-vite'
 
 const external = [
-  'ws',
 ]
 
 function genCpModule(module: string) {

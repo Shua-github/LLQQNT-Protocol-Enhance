@@ -4,7 +4,7 @@ import PromptManager from "./electron-prompts/src/index"
 const prompts = new PromptManager({width: 400})
 
 import {NTQQPacketApi, initWrapperSession} from "./napcat-protocol-packet";
-import {ipcMain} from 'electron';
+import {BrowserWindow, ipcMain} from 'electron';
 import {PromptTemplate} from "./electron-prompts/src/types";
 
 let wrapperSession: any = undefined;
@@ -76,3 +76,12 @@ ipcMain.handle('llqqnt_pp_setSpecialTitle', async (event: any, {groupUin, userUi
         await api.sendSetSpecialTittlePacket(groupUin, userUid, title);
     }
 });
+
+export function onBrowserWindowCreated(window: BrowserWindow) {
+    const allWindows = BrowserWindow.getAllWindows();
+    allWindows.forEach((window) => {
+        if (!window.isDestroyed()) {
+            window.webContents.send('llqqnt_pp_create_window', {windowId: window.id});
+        }
+    });
+}
